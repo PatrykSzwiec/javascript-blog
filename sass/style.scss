@@ -1,34 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext');
-
 /* Variables */
-
 $color-light: #fff;
-$color-dark: #444;
-
+$color-dark: #1c202b;
 $font-logo: 'Sacramento', cursive;
 $font-header: 'Oswald', sans-serif;
 $font-text: 'Source Sans Pro', sans-serif;
-
 /* Global */
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
 body {
-  background: $color-light;
+  background-color: $color-dark;
   font-family: $font-text;
-  color: $color-dark;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
+  h1 {
+    color:red;
+  }
 }
-
 .container {
   max-width: 1140px;
   margin: 0 auto;
 }
-
 .section-title {
   font-size: 22px;
   text-transform: uppercase;
@@ -40,32 +34,37 @@ body {
     color: lighten($color-dark, 20%);
   }
 }
-
 /* Layout */
-
 .wrapper {
   display: flex;
   margin-left: 10px;
 }
-
 .sidebar {
   flex: 1 0 0;
+  background-color: #980d14;
 }
-
 .posts {
   flex: 2 0 0;
+  background-color: white;
 }
-
 .sidebar, .posts {
-  background: $color-light;
   margin-right: 10px;
   padding: 40px;
   border: 1px solid $color-dark;
   border-radius: 5px;
 }
-
 /* Logo */
-
+.logo-animation{
+  flex: 1 0 0;
+  width: 33.3333%;
+}
+.ani-right{
+  transform: rotateY(180deg);
+}
+.logo-text{
+  flex: 1 0 0;
+  width: 33.3333%;
+}
 .logo {
   font-family: $font-logo;
   font-weight: 400;
@@ -73,45 +72,47 @@ body {
   line-height: 1;
   text-align: center;
 }
-
 /* Lists */
-
 .list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  .active {
-    font-weight: bold;
+  .active span {
+    color: black;
+    font-weight: 900;
+    text-decoration: underline;
   }
+  a {
+    color:white;
+    text-decoration: none;
+  }
+  
 }
-
 .list-horizontal {
   li {
     display: inline-block;
+    a {
+    color:black;
+    font-weight: bold;
+    }
   }
 }
-
 /* Authors */
-
 .authors {
   li {
     margin-bottom: 12px;
   }
 }
-
 /* Post */
-
 .post {
   display: none;
   &.active {
     display: block;
   }
 }
-
 .post-author {
   font-style: italic;
 }
-
 .post-tags {
   display: flex;
   p {

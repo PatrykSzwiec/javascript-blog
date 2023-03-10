@@ -86,7 +86,6 @@ body {
     color:white;
     text-decoration: none;
   }
-  
 }
 .list-horizontal {
   li {
@@ -105,9 +104,13 @@ body {
 }
 /* Post */
 .post {
-  display: none;
+  transition: opacity 2s ease-out;
+  opacity: 0;
+  height: 0;
+    overflow: hidden;
   &.active {
-    display: block;
+    opacity: 1;
+    height: auto;
   }
 }
 .post-author {
